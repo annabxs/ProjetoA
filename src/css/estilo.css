@@ -1,10 +1,11 @@
+/*resete basico*/
 @import url('https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&display=swap');
 
-/* RESET BASICO */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 body {
@@ -16,11 +17,10 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-
 }
 
 header {
-    background: #1F2937;
+    background: #1f2937;
     color: #fff;
     padding: 20px;
     display: flex;
@@ -29,26 +29,36 @@ header {
 
 header nav ul {
     list-style: none;
-    padding: 0px;
+    padding: 0;
     margin: 10px;
     display: flex;
-    gap: 10px;
+    gap: 30px;
 }
 
 header nav ul li a {
-    color: #fff;
+    color: #bdbdbd;
+    /* Cor do link */
     text-decoration: none;
-    font-size: 1.4rem;
+    /* Remove sublinhado */
+    display: inline-block;
+    /* Permite manipular como bloco */
+    transition: 0.2s;
+    /* Transição suave para hover */
+    font-size: 1.4em;
+
 }
 
-/* HOVER É UMA PSEUDOCLASSE QUE REALIZA UM EFEITO AO PASSAR O MOUSE */
+/* HOVER é uma pseudo-classe que realiza um efeito ao passar o mouse  */
 header nav ul li a:hover {
-    text-decoration: underline 5px #fff;
+    color: white;
+    /* Muda cor ao passar o mouse */
+    transform: scale(1.05);
+    /* Efeito de zoom leve */
 }
 
 #conteudo {
     display: grid;
-    grid-template-columns: 1fr 200px;
+    grid-template-columns: 2fr 200px;
 }
 
 main {
@@ -61,74 +71,73 @@ main {
     width: 200px;
     height: 400px;
     margin: 10px;
-    padding: 5px;
-    border: 1px solid #1F2937;
-    background-color: #fff;
-    border-radius: 20px;
+    padding: 10px;
+    border: 1px solid #1f2937;
+    background: white;
+    border-radius: 30px;
+    text-align: center;
 }
 
 .produto img {
     width: 100%;
-    height: 170px;
+    height: 150px;
     margin-bottom: 10px;
-    border-radius: 20px;
+    border-radius: 30px;
+    object-fit: cover;
 }
 
 .preco {
     font-weight: 700;
-    margin-top: 50px;
-    color: #1F2937;
+    margin-top: 30px;
+    color: #1f2937;
     text-align: center;
-    font-size: 1.7rem;
+    font-size: 1.7em;
+
 }
 
 button {
-    background-color: #D9D2D0;
-    margin-top: 20px;
-    margin-left: 15px;
+    background: #D9D2D0;
+    border-radius: 30px;
     padding: 15px 45px;
-    border-radius: 20px;
     cursor: pointer;
+    display: block;
+    margin: 25px auto 0 auto;
+    /* cima, direita, baixo, esquerda */
+    transition: 0.2s;
+    /* Transição suave */
 }
 
 button:hover {
+    box-shadow: 0px 0px 8px #ffffff;
+    /* Adiciona uma sombra branca */
+    transform: scale(1.05);
+    /* Efeito de zoom leve */
     background: #1F2937;
     color: #fff;
-    transition: color .1s;
 }
+
 
 aside {
-    width: 300px;
-    padding: 25px;
-    background: #f8f8f8;
-
-}
-
-aside h2 {
-    color: #1F2937;
-    margin-bottom: 10px;
-}
-
-aside h3 {
-    color: #1F2937;
-    margin-top: 10px;
+    width: 200px;
+    padding: 10px;
+    background-color: #F3F4F6;
 }
 
 aside ul {
     list-style: none;
-    padding: 5px;
 }
 
 aside a {
     text-decoration: none;
-    color: #1F2937;
+    color: #151515;
 }
 
 footer {
-    background: #1f2937;
-    color: white;
+    background-color: #19243A;
     padding: 20px 0;
     margin-top: auto;
+    color: white;
+
 }
 
 .footer-content {
@@ -145,7 +154,6 @@ footer {
 .footer-content ul {
     list-style: none;
     padding: 0;
-
 }
 
 .footer-content li {
@@ -155,17 +163,15 @@ footer {
 .footer-content a {
     color: white;
     text-decoration: none;
-
 }
 
-/* RESPONSIVIDADE */
-@media (max-width : 768px) {
+/* responsividade */
+@media(max-width:768px) {
     header nav ul {
         display: flex;
         flex-direction: column;
         gap: 1rem;
         align-items: center;
-
     }
 
     header nav ul li {
@@ -174,27 +180,31 @@ footer {
         text-align: center;
         border-radius: 40px;
         font-size: 1.3rem;
-        
+        background-image: linear-gradient;
     }
 
     header nav ul li a {
         display: flex;
         justify-content: center;
         align-items: center;
-        color: fff;
+        color: white;
+
     }
 
     header nav ul li a:hover {
-        text-decoration: none;
+
+
+        transform: none;
+        /* Efeito de zoom leve */
     }
 
     #conteudo {
         grid-template-columns: 1fr;
+
     }
 
     aside {
         display: none;
-
     }
 
     .footer-content {
@@ -203,5 +213,6 @@ footer {
         flex-direction: column;
         max-width: 100%;
         margin: 0 auto;
+
     }
 }
