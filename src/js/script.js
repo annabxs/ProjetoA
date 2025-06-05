@@ -1,5 +1,3 @@
-
-
 let p1 = prompt("Digite seu nome")
 let p2 = prompt("Digite um poder que gostaria de ter")
 let p3 = prompt("Digite o nome de um vilão")
